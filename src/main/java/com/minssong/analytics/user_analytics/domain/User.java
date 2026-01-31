@@ -1,11 +1,16 @@
-package com.minssong.useranalytics.domain;
+package com.minssong.analytics.user_analytics.domain;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.time.LocalDateTime;
 
 @Entity
 @Data  // Lombok: getter/setter/toString
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "users")  // 테이블명 명시
 public class User {
     @Id
@@ -19,12 +24,4 @@ public class User {
     private String name;
 
     private LocalDateTime joinDate = LocalDateTime.now();
-
-    // 기본 생성자 (JPA 필수)
-    public User() {}
-
-    public User(String userId, String name) {
-        this.userId = userId;
-        this.name = name;
-    }
 }

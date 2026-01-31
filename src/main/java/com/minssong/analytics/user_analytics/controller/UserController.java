@@ -1,7 +1,7 @@
-package com.minssong.useranalytics.controller;
+package com.minssong.analytics.user_analytics.controller;
 
-import com.minssong.useranalytics.domain.User;
-import com.minssong.useranalytics.repository.UserRepository;
+import com.minssong.analytics.user_analytics.domain.User;
+import com.minssong.analytics.user_analytics.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

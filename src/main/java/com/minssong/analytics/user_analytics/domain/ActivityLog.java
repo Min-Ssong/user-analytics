@@ -1,11 +1,16 @@
-package com.minssong.useranalytics.domain;
+package com.minssong.analytics.user_analytics.domain;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.time.LocalDateTime;
 
 @Entity
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "activity_logs")
 public class ActivityLog {
     @Id
@@ -22,13 +27,4 @@ public class ActivityLog {
 
     @Column(nullable = false)
     private LocalDateTime timestamp = LocalDateTime.now();
-
-    // 생성자
-    public ActivityLog() {}
-
-    public ActivityLog(Long userId, String eventType, String details) {
-        this.userId = userId;
-        this.eventType = eventType;
-        this.details = details;
-    }
 }

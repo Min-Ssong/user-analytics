@@ -1,6 +1,6 @@
-package com.minssong.useranalytics.repository;
+package com.minssong.analytics.user_analytics.repository;
 
-import com.minssong.useranalytics.domain.User;
+import com.minssong.analytics.user_analytics.domain.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.Optional;
 
