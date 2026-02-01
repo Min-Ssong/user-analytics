@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
 
@@ -21,10 +22,11 @@ public class ActivityLog {
     private Long userId;  // User 외래키
 
     @Column(nullable = false)
-    private String eventType;  // "LOGIN", "LOGOUT", "VIEW_POST", "PURCHASE"
+    private String eventType;
 
     private String details;  // 추가 메타데이터
 
-    @Column(nullable = false)
-    private LocalDateTime timestamp = LocalDateTime.now();
+    @CreationTimestamp
+    @Column(nullable = false, updatable = false)
+    private LocalDateTime timestamp;
 }

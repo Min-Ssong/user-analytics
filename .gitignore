@@ -12,6 +12,7 @@ build/
 !gradle-wrapper.properties
 .gradletasknamecache
 gradle-app.setting
+gradle.properties
 
 # Logs
 *.log
